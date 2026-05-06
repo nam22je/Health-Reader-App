@@ -1,3 +1,277 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #f5f5f5;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #eef5f9;
+  color: #1f2d3d;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header {
+  background: linear-gradient(135deg, #1d5f8a, #2aa7a2);
+  color: white;
+  padding: 28px 22px;
+  border-radius: 24px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 20px rgba(30, 95, 138, 0.25);
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin: 0 0 12px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.subtitle {
+  margin: 10px 0 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.notice-card,
+.input-section,
+.result-section {
+  background: white;
+  padding: 20px;
+  border-radius: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.notice-card h2,
+.input-section h2,
+.result-section h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.notice-card p,
+.section-desc {
+  color: #5d6d7e;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.button-row button {
+  flex: 1;
+}
+
+.group-title {
+  margin: 22px 0 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #eef7f6;
+  color: #225d5a;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.input-card {
+  border: 1px solid #dce7ee;
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 14px;
+  background: #fbfdff;
+}
+
+.input-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.input-title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.unit {
+  font-size: 13px;
+  color: #6c7a89;
+}
+
+.input-card input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cfdde6;
+  border-radius: 14px;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-card input:focus {
+  border-color: #2a8fb8;
+  box-shadow: 0 0 0 3px rgba(42, 143, 184, 0.12);
+}
+
+.input-desc {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #6c7a89;
+  line-height: 1.5;
+}
+
+.main-button,
+.sub-button {
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.main-button {
+  background: #1d75a6;
+  color: white;
+  margin-top: 6px;
+}
+
+.sub-button {
+  background: #e8f0f5;
+  color: #1d5f8a;
+}
+
+.result-section {
+  display: none;
+}
+
+.summary-box {
+  padding: 16px;
+  border-radius: 18px;
+  background: #eef7f6;
+  color: #225d5a;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.summary-counts {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.summary-item {
+  flex: 1;
+  background: white;
+  border-radius: 14px;
+  padding: 10px 6px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.summary-number {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.result-card {
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 14px;
+  border-left: 6px solid #999;
+  background: #fbfdff;
+}
+
+.result-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.result-value {
+  font-size: 14px;
+  color: #5d6d7e;
+  margin-bottom: 10px;
+}
+
+.status {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.normal {
+  border-left-color: #2eaf68;
+}
+
+.normal .status {
+  background: #e7f7ee;
+  color: #1d7a45;
+}
+
+.caution {
+  border-left-color: #e5a400;
+}
+
+.caution .status {
+  background: #fff5d8;
+  color: #8a6200;
+}
+
+.danger {
+  border-left-color: #e74c3c;
+}
+
+.danger .status {
+  background: #fdecea;
+  color: #b83224;
+}
+
+.result-text,
+.tip-text {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+.tip-text {
+  color: #3f5f74;
+}
+
+#backToInputBtn {
+  margin-top: 12px;
+}
+
+#goTopBtn {
+  margin-top: 10px;
+}
+
+.footer {
+  color: #7f8c8d;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.6;
+  padding: 10px 0 30px;
 }
